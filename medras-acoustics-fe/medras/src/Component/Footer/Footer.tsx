@@ -7,10 +7,10 @@ export const Footer = () => {
         <div className="footer-left">
           {/* <img
             src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`}
-            alt="Medras Acoustics Logo"
+            alt="Madras Acoustics Logo"
             className="footer-logo"
           /> */}
-          <span className="footer-company-name">Medras Acoustics</span>
+          <span className="footer-company-name">Madras Acoustics</span>
         </div>
 
         {/* Center - Navigation Links */}
@@ -30,7 +30,7 @@ export const Footer = () => {
           </ul>
         </nav>
 
-        
+
       </div>
 
       {/* Social Media Links - Centered on a New Line */}
@@ -51,7 +51,7 @@ export const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright">
-        &copy; {new Date().getFullYear()} Madras Acoustics. All rights reserved.
+        Copyright &copy; {new Date().getFullYear()} Madras Acoustics - All rights reserved
       </div>
     </footer>
   );
