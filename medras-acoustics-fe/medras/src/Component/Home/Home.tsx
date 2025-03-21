@@ -61,6 +61,24 @@ export const Home = () => {
                     <p>
                         We are a passionate team dedicated to delivering high-quality services.
                         Our goal is to innovate and inspire through technology.
+                    </p>   <p>
+                    <h1>Madras Acoustics </h1> 
+                    <h3>Music | Space | Design</h3> <br/>
+
+                    At Madras Acoustics, we craft immersive soundscapes and exceptional audiovisual environments. Since 2020, 
+                    our expertise has shaped over 100 world-class projects — from professional music studios and concert auditoriums to 
+                    luxury hotels, vibrant nightclubs, and elite home cinemas.
+
+                    Our globally experienced team combines creativity and technical precision to deliver customized installations 
+                    that meet the highest standards. By embracing emerging technologies and design innovations, we ensure every 
+                    project offers an enhanced and memorable experience.<br/>
+                    <b> "Exceptional sound design is born from expertise, innovation, and a deep understanding of acoustic principles."</b><br/><br/>
+                    <h3>Services by Madras Acoustics</h3> 
+
+                    <h4>Professional</h4> Music Recording Studio / Film Mix Stage
+
+                    <h4>Residential</h4> Home Theatre / Home Cinema / Party Area / Hospital ICU's 
+
                     </p>
                 </div>
             </div>

@@ -79,7 +79,7 @@ export const Contact = () => {
           {/* Contact Details */}
           <div className="contact-details">
             <p><i className="fas fa-envelope contact-icon"></i><strong>Email:</strong>jeromedj@madrasacoustics.com</p>
-            <p><i className="fas fa-phone-alt contact-icon"></i><strong>Phone:</strong> +91 8248365067</p>
+            <p><i className="fas fa-phone-alt contact-icon"></i><strong>Phone:</strong> +91-82483 65067</p>
             <p><i className="fas fa-map-marker-alt contact-icon"></i><strong>Address:</strong> 123 Main Street, New York, NY 10001</p>
           </div>
 

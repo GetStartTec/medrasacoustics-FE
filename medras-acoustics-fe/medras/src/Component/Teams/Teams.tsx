@@ -30,8 +30,15 @@ export const Teams: React.FC = () => {
           <h2>ABOUT US</h2>
           <div className="underline"></div>
           <p>
-            We are a passionate team dedicated to delivering high-quality services.
-            Our goal is to innovate and inspire through technology.
+           Madras Acoustics - craft immersive soundscapes and exceptional audiovisual environments. Since 2020, 
+                    our expertise has shaped over 100 world-class projects — from professional music studios and concert auditoriums to 
+                    luxury hotels, vibrant nightclubs, and elite home cinemas.
+
+                    Our globally experienced team combines creativity and technical precision to deliver customized installations 
+                    that meet the highest standards. By embracing emerging technologies and design innovations, we ensure every 
+                    project offers an enhanced and memorable experience.<br/><br/>
+                    <b> "Exceptional sound design is born from expertise, innovation, and a deep understanding of acoustic principles."</b><br/><br/>
+            
           </p>
         </div>
       </div>

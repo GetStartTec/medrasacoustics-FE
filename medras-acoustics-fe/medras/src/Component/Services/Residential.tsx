@@ -4,6 +4,8 @@ const faqs = [
     { question: "What residential services do you offer?", answer: "We offer home acoustics, soundproofing, and AV installations." },
     { question: "Do you provide home theater setup?", answer: "Yes, we specialize in custom home theater designs and installations." },
     { question: "Can I get a consultation?", answer: "Absolutely! We provide in-home consultations to assess your needs." },
+    { question: "Do you offer soundproofing solutions for noisy environments?", answer: "Yes, we provide customized soundproofing for homes, studios, and commercial spaces." },
+    { question: "Can you integrate smart home technology with AV systems?", answer: "Yes, we specialize in integrating smart controls with your home entertainment systems." },
 ];
 
 export const Residential = () => {
@@ -48,8 +50,9 @@ export const Residential = () => {
             <div className="service-section">
                 <div className="service-content">
                     <h2>Residential Services</h2>
-                    <div className="underline"></div>
-                    <p>We offer top-quality residential acoustic solutions, soundproofing, and home theater installations to enhance your home experience.</p>
+                    <p>In today’s high-definition world, home entertainment systems have evolved significantly. At Madras Acoustics, we specialize in creating customized spaces that cater to each client's unique preferences and requirements. Whether it's a home cinema, lounge area, or party room, we provide professional acoustic and AV design solutions to meet even the most demanding needs.<br/><br/>
+                        Our designed spaces are not only engineered to deliver exceptional sound quality, but they are also aesthetically crafted to complement your interiors. Leveraging decades of global expertise, we excel in combining acoustic performance, sound insulation, ergonomics, and interior design to achieve outstanding results.<br/><br/>
+                        Our goal is to provide every client with a structured, efficient, and timely service to ensure smooth project execution. With our expert team of acousticians, audio engineers, interior designers, and construction specialists, we turn your home entertainment vision into reality..</p>
                 </div>
                 <div className="service-image">
                     <img src="/images/residential-service.png" alt="Residential Service" />

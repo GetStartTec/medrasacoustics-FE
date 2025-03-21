@@ -37,7 +37,10 @@ export const Professional = () => {
           <div className="service-content">
             <h2>Professional Services</h2>
             <div className="underline"></div>
-            <p>We provide high-quality professional services for various industries, ensuring top-notch solutions for your needs.</p>
+            <p>Madras Acoustics, we specialize in fine-tuning audio systems to deliver clear, consistent, and immersive sound experiences. By carefully blending the system with the room’s acoustical environment, we ensure optimal performance tailored to the space.<br/><br/>
+              Our system optimization service involves an in-depth analysis of how sound behaves across the listening area. Using advanced tools and proven techniques, we assess room acoustics and speaker interactions to maximize system performance.<br/><br/>
+              Once acoustic measurements and analysis are complete, we refine system settings with precision to achieve optimal sound clarity and balance.<br/><br/>
+              Finally tonal shaping — is where our expertise shines. Through meticulous adjustments and expert listening, we unlock the system's full potential, ensuring the sound feels natural, engaging, and immersive.This is where the magic happens — allowing you to fully enjoy the music, dialogue, or soundtrack without distraction</p>
           </div>
           <div className="service-image">
             <img src="/images/professional-service.png" alt="Professional Service" />
