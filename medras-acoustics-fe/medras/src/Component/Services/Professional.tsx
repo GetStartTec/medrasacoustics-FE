@@ -1,9 +1,11 @@
 import { useState } from "react";
 
 const faqs = [
-  { question: "What services do you offer?", answer: "We offer acoustics, audio-visuals, room tuning, and more." },
-  { question: "How can I contact you?", answer: "You can contact us via email or phone." },
-  { question: "Do you offer consultation?", answer: "Yes, we provide professional consultation services." },
+  { question: "Why do businesses need professional services?", answer: "We provide expert guidance, improve efficiency, and ensure compliance." },
+  { question: "How do I choose the right professional service provider?", answer: "Check experience, reputation, pricing, and client reviews" },
+  { question: "What are common pricing models for professional services?", answer: "Hourly rates, fixed pricing, retainers, or project-based ." },
+  { question: "How is technology impacting professional services?", answer: "AI, automation, and cloud solutions are enhancing efficiency and service delivery." },
+  { question: "Are professional services customized for each client?", answer: "Yes, they are tailored to meet specific business or individual needs." },
 ];
 
 export const Professional = () => {
@@ -14,12 +16,12 @@ export const Professional = () => {
   };
   const [popupContent, setPopupContent] = useState<{ title: string; image: string; description: string } | null>(null);
   const sections = [
-    { title: "Music Studios", image: "/images/music-studio.png", description: "Detailed information about Music Studios." },
-    { title: "Film Mix Stages", image: "/images/film-mix.png", description: "Detailed information about Film Mix Stages." },
-    { title: "Recording Room", image: "/images/song-room.jpg", description: "Detailed information about Recording Rooms." },
-    { title: "Commercial Theater", image: "/images/theater-1.jpg", description: "Detailed information about Commercial Theaters." },
-    { title: "Cinema", image: "/images/theater-2.jpg", description: "Detailed information about Cinemas." },
-    { title: "Commercial", image: "/images/commercial.png", description: "Detailed information about Commercial spaces." }
+    { title: "Music Studios", image: "/images/music-studio.png", description: "Music Studio is more than just a room—it's a space where creativity meets precision to produce exceptional sound quality. Whether for recording, mixing, or mastering . Designed with soundproofing and acoustic treatment, music studios minimize unwanted noise and ensure crystal-clear recordings." },
+    { title: "Film Mix Stages", image: "/images/film-mix.png", description: "Film Mix Stage is the heart of post-production audio, where sound is sculpted to enhance the cinematic experience. Every whisper, explosion, and musical score is meticulously balanced to create immersive, high-fidelity soundscapes. " },
+    { title: "Recording Room", image: "/images/song-room.jpg", description: "Recording room is the foundation of high-quality audio production, designed to capture every note, word, and sound with absolute clarity. Whether for music, podcasts, voiceovers, or film, an acoustically optimized recording space ensures pure, professional-grade sound." },
+    { title: "Commercial Theater", image: "/images/theater-1.jpg", description: "Commercial Theater is more than just a place to watch movies—it’s an immersive audiovisual experience that brings stories to life on the big screen. Designed with cutting-edge technology, commercial theaters deliver stunning visuals and breathtaking sound for audiences worldwide." },
+    { title: "Cinema", image: "/images/theater-2.jpg", description: "Cinema is more than just a place to watch movies—it’s a gateway to immersive storytelling, where visuals, sound, and emotions come together to create unforgettable experiences. Modern cinemas feature 4K, IMAX, and HDR projection, delivering crystal-clear images that bring stories to life with exceptional detail and color depth." },
+    { title: "Commercial", image: "/images/commercial.png", description: "Commercial spaces are purpose-built environments designed to support businesses, enhance productivity, and cater to consumer needs. From corporate offices to retail outlets, these spaces are strategically planned to optimize efficiency, accessibility, and customer engagement." }
   ];
 
   return (
