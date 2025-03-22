@@ -28,8 +28,8 @@ export const Acoustics: React.FC = () => {
       <div className="hero-section">
         <img src={`${process.env.PUBLIC_URL}/images/acoustics-banner.jpg`} alt="Contact" className="hero-image" />
         <div className="hero-content">
-          <h1>Get in Touch</h1>
-          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+          <h1>Engineering Acoustic Excellence</h1>
+          <p>Expert engineering ensures clarity, comfort, and precision in every environment.</p>
         </div>
       </div>
     <div className="acoustics-container">

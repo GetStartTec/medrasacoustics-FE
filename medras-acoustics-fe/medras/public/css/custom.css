@@ -308,6 +308,35 @@ body {
 
 }
 
+
+
+.contact-info:hover {
+  background-color: white !important; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
+
+
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px rgba(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+
+
+.query-form:hover {
+  background-color: white !important; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  transition: all 0.3s ease-in-out; 
+
+
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px rgba(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
+
 /* .query-form input{
   border:1px solid #bdeff5;
   outline: none;
@@ -318,13 +347,33 @@ body {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #bdeff5;
+  border: 2px solid #bdeff5;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
   color: #160f29;
   border-radius: 8px;
   backdrop-filter: blur(8px);
 }
+
+/* Hover Effect */
+.query-form input:hover {
+  border-color: #246a73;
+  box-shadow: 0px 4px 8px rgba(36, 106, 115, 0.3);
+}
+
+/* Focus Effect (When typing) */
+.query-form input:focus {
+  border-color: #246a73;
+  background-color: #f8f8f8;
+  box-shadow: 0px 4px 10px rgba(36, 106, 115, 0.5);
+}
+
+/* Increase font weight when input has data */
+.query-form input:not(:placeholder-shown) {
+  font-weight: 600;
+}
+
+
 
 .query-form button {
   width: 100%;
@@ -338,7 +387,11 @@ body {
 }
 
 .query-form button:hover {
-  background: #a0d6b4;
+  background-color: white;
+  color: white; 
+  border: 3px solid #246a73;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -733,6 +786,15 @@ section h2 {
   border-radius: 15px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 
+}
+
+.about-image img:hover {
+  background-color: #246a73; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px #246a73(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .about-text {
