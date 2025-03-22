@@ -707,30 +707,39 @@ section h2 {
 .about-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
-  margin-bottom: 50px;
+  margin: 50px 5%;
   flex-direction: row-reverse;
 }
 
 .about-image {
-  flex: 3;
+  flex: 0 0 45%;
+  max-width: 45%;
 }
 
 .about-image img {
   width: 100%;
   border-radius: 10px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 
 }
 
 .about-text {
-  flex: 2;
-  text-align: center;
+  flex: 0 0 55%;
+  max-width: 55%;
+  text-align: left;
+  color: #333;
+  position:relative;
 }
 
 .about-text h2 {
   font-size: 2rem;
   font-weight: bold;
   color: #17575f;
+  margin-bottom: 10px;
 }
 
 .underline {
@@ -740,9 +749,60 @@ section h2 {
   margin: 10px auto;
 }
 
+.about-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.about-text h3 {
+  font-size: 1.5rem;
+  color: #17575f;
+  margin-bottom: 15px;
+}
+
 .about-text p {
-  font-size: 1rem;
-  margin-top:20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 15px;
+}
+
+.about-text b {
+  font-size: 1.2rem;
+  color: #000;
+  display: block;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  transform: skewX(-5deg);
+  letter-spacing: 1.2px;
+}
+
+.about-text h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #17575f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image,
+  .about-text {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .about-text {
+    text-align: center;
+  }
 }
 
 /* Team Section */
@@ -1238,48 +1298,56 @@ section h2 {
 /* Cards */
 .home-card {
   position: relative;
-  cursor: pointer;
+  width: 50%;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .home-card img {
   width: 100%;
-  height: 300px;
   object-fit: cover;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage */
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
 /* Card Overlay with Glassmorphism */
 .home-card-overlay {
   position: absolute;
-  top: 90%; /* Adjusted to lower the overlay */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; /* Reduce width for better aesthetics */
-  height: 60px; /* Minimized height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #17575f;
-  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.15); /* Subtle glass effect */
-  border-radius: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* Hover Effect */
 .home-card:hover .home-card-overlay {
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(15px);
-  color: #160f29;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #222;
 }
 
+/* Hover Effect */
+.home-card:hover {
+  transform: scale(1.05);
+}
 
-/* Hover Effects */
 .home-card:hover img {
   transform: scale(1.1);
 }
@@ -1400,5 +1468,169 @@ section h2 {
   color: white; /* Pure white text */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Soft black shadow for contrast */
   transform: skewX(-5deg); /* Slight slant for a stylish slide effect */
+ letter-spacing: 1.2px;
+}
+
+.home-services-section {
+  text-align: center;
+  margin-top: 5%;
+}
+
+/* Two-Column Grid */
+.home-services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.home-overlay {
+  display: flex;
+  flex-direction: column; /* Ensures text appears one below the other */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.typewriter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Cinzel", serif;
+  border-right: 2px solid white; /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: fit-content;
+  margin-bottom: 20px; /* Space below first line */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.static-text {
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  margin-top: 20px; /* Ensure proper spacing between lines */
+  color: white;
+  font-style: italic;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Soft black shadow for contrast */
+  transform: skewX(-5deg); /* Slight slant for a stylish slide effect */
   letter-spacing: 1.2px;
+}
+
+.home-about{
+  width: 120px;
+  height: 3px;
+  background-color:#444;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+
+.client-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.client-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-image {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+}
+
+.client-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curved-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.curve {
+  border-radius: 50px;
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+  margin-top: 5px;
+}
+
+.large {
+  background-color: #a0c4ff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.medium {
+  background-color: #bde0fe;
+  height: 15px;
+  width: 70%;
+}
+
+.small {
+  background-color: #ffafcc;
+  height: 10px;
+  width: 60%;
+}
+
+.carousel-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-btn {
+  background: #ddd;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #bbb;
 }

@@ -1,115 +1,138 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const softwareSections = [
-    {
-      title: "AFMG",
-      image: "/images/afmg.png",
-      content: "AFMG provides cutting-edge acoustic simulation and measurement software, helping engineers design better spaces with soundproofing and clarity.",
-      imageLeft: true,
-    },
-    {
-      title: "SOUND FLOW",
-      image: "/images/sound-flow.jfif",
-      content: "Sound Flow software helps in simulating the behavior of porous materials for acoustics, widely used for noise control and sound absorption research.",
-      imageLeft: false,
-    },
-    {
-      title: "REFLEX",
-      image: "/images/acoustic-1.jpeg",
-      content: "REFLEX specializes in simulating sound reflections in architectural spaces, improving sound distribution and speech intelligibility.",
-      imageLeft: true,
-    },
-    {
-      title: "INSUL",
-      image: "/images/acoustic-1.jpeg",
-      content: "INSUL predicts the transmission loss of walls, floors, and ceilings, helping in designing soundproof and noise-isolated environments.",
-      imageLeft: false,
-    },
-    {
-      title: "SYSTUNE",
-      image: "/images/acoustic-1.jpeg",
-      content: "SYSTUNE is a powerful real-time sound system tuning and measurement software for optimizing performance in large venues and auditoriums.",
-      imageLeft: true,
-    },
-  ];
-
-const serviceSections = [
-    { title: "Music Studios", image: "/images/acoustic-1.jpeg", path: "/professional" },
-    { title: "Film Mix Stages", image: "/images/acoustic-1.jpeg", path: "/professional" },
-    { title: "Home Cinemas", image: "/images/acoustic-1.jpeg", path: "/residential" },
-    { title: "Home Entertainment", image: "/images/acoustic-1.jpeg", path: "/residential" },
-];
 export const Home = () => {
+    interface Client {
+        id: number;
+        name: string;
+        image: string;
+        content: string;
+      }
+      
+      const clients: Client[] = [
+        {
+          id: 1,
+          name: "Client 1",
+          image: "/images/client1.jpg",
+          content: "Client 1 testimonial or description goes here."
+        },
+        {
+          id: 2,
+          name: "Client 2",
+          image: "/images/client2.jpg",
+          content: "Client 2 testimonial or description goes here."
+        },
+        {
+          id: 3,
+          name: "Client 3",
+          image: "/images/client3.jpg",
+          content: "Client 3 testimonial or description goes here."
+        }
+      ];
+
+
+  const nextClient = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % clients.length);
+  };
+
+  const prevClient = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? clients.length - 1 : prevIndex - 1
+    );
+  };
+    const fullText = "Engineering Excellence in Sound & Silence";
+    const [text, setText] = useState("");
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        if (index < fullText.length) {
+            const timeout = setTimeout(() => {
+                setText((prev) => prev + fullText[index]);
+                setIndex(index + 1);
+            }, 50); // Typing speed
+
+            return () => clearTimeout(timeout);
+        }
+    }, [index]);
+
     return (
         <>
-         {/* Hero Section */}
-         <div className="home-section">
-                <div className="home-overlay">
-                <h1>Madras Acoustics – Crafting Sound, Perfecting Silence</h1>
-                </div>
-            </div>
-
-
-        <div className="home-container  mt-10 px-6 md:px-20">
-
-            <div className="about-section">
-                <div className="about-image">
-                    <img src="/images/home-page-2.jpg" alt="About Us" />
-                </div>
-                <div className="about-text">
-                    <h2>ABOUT US</h2>
-                    <p>
-                        We are a passionate team dedicated to delivering high-quality services.
-                        Our goal is to innovate and inspire through technology.
-                    </p>   <p>
-                    <h1>Madras Acoustics </h1> 
-                    <h3>Music | Space | Design</h3> <br/>
-
-                    At Madras Acoustics, we craft immersive soundscapes and exceptional audiovisual environments. Since 2020, 
-                    our expertise has shaped over 100 world-class projects — from professional music studios and concert auditoriums to 
-                    luxury hotels, vibrant nightclubs, and elite home cinemas.
-
-                    Our globally experienced team combines creativity and technical precision to deliver customized installations 
-                    that meet the highest standards. By embracing emerging technologies and design innovations, we ensure every 
-                    project offers an enhanced and memorable experience.<br/>
-                    <b> "Exceptional sound design is born from expertise, innovation, and a deep understanding of acoustic principles."</b><br/><br/>
-                    <h3>Services by Madras Acoustics</h3> 
-
-                    <h4>Professional</h4> Music Recording Studio / Film Mix Stage
-
-                    <h4>Residential</h4> Home Theatre / Home Cinema / Party Area / Hospital ICU's 
-
-                    </p>
-                </div>
-            </div>
-
-            <div className="home-software-section">
-                <h2 className="home-software-title">Software</h2>
-                <div className="home-grid-container">
-                    {softwareSections.map((service, index) => (
-                        <div key={index} className="home-card">
-                            <img src={service.image} alt={service.title} />
-                            <div className="home-card-overlay">{service.title}</div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Services Section */}
-            <div className="home-services-section">
-                <h2 className="home-section-title">Services</h2>
-                <div className="home-grid-container">
-                    {serviceSections.map((service, index) => (
-                        <div key={index} className="home-card">
-                            <img src={service.image} alt={service.title} />
-                            <div className="home-card-overlay">{service.title}</div>
-                        </div>
-                    ))}
-                </div>
+        <div className="home-section">
+            <div className="home-overlay">
+                <h1 className="typewriter">{text}</h1>
+                <p className="static-text">We bring precision acoustics to life, enhancing every sonic experience.From home theaters to studios, </p>
+                <p className="static-text">we create spaces where sound thrives.</p>
             </div>
         </div>
+
+            {/* Main Container */}
+            <div className="home-container mt-10 px-6 md:px-20">
+
+                {/* About Us Section */}
+                <div className="about-section">
+                    <div className="about-image">
+                        <img src="/images/home-page-2.jpg" alt="About Us" />
+                    </div>
+                    <div className="about-text">
+                        <h2>ABOUT US</h2>
+                        <h3 className="home-about"></h3>
+                        <h1>Madras Acoustics</h1>
+                        <h3>Sound Proofing | Space | Design</h3>
+                        <p>
+                            At Madras Acoustics, we craft immersive soundscapes and exceptional audiovisual environments. Since 2020,
+                            our expertise has shaped over 100 world-class projects — from professional music studios and concert auditoriums to
+                            luxury hotels, vibrant nightclubs, and elite home cinemas.
+                        </p>
+                        <p>
+                            Our globally experienced team combines creativity and technical precision to deliver customized installations
+                            that meet the highest standards. By embracing emerging technologies and design innovations, we ensure every
+                            project offers an enhanced and memorable experience.
+                        </p>
+                        <b> "Exceptional sound design is born from expertise, innovation, and a deep understanding of acoustic principles."</b>
+                    </div>
+                </div>
+
+                {/* Services Section */}
+                <div className="home-services-section">
+                    <h2 className="home-section-title">Services</h2>
+                    <div className="home-services-container">
+                        <Link to="/services/professional" className="home-card">
+                            <img src="/images/professional-home.jpg" alt="Professional Services" />
+                            <div className="home-card-overlay">Professional Services</div>
+                        </Link>
+                        <Link to="/services/residential" className="home-card">
+                            <img src="/images/residential-home.jpg" alt="Residential Services" />
+                            <div className="home-card-overlay">Residential Services</div>
+                        </Link>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="client-carousel">
+      <h2 className="carousel-title">Our Clients</h2>
+      <div className="carousel-container">
+        <div className="client-card">
+          <div className="client-image">
+            <img src={clients[index].image} alt={clients[index].name} />
+          </div>
+          <div className="curved-content">
+            <div className="curve large">{clients[index].content}</div>
+            <div className="curve medium"></div>
+            <div className="curve small"></div>
+          </div>
+        </div>
+      </div>
+      <div className="carousel-buttons">
+        <button onClick={prevClient} className="carousel-btn">
+          <FaChevronLeft />
+        </button>
+        <button onClick={nextClient} className="carousel-btn">
+          <FaChevronRight />
+        </button>
+      </div>
+    </div>
         </>
     );
 };
-
-
