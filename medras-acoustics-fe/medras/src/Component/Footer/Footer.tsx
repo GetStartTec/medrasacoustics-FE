@@ -3,15 +3,18 @@ export const Footer = () => {
     <footer className="footer">
       {/* Top Section - Logo & Navigation */}
       <div className="footer-top">
-        {/* Left - Logo & Name */}
         <div className="footer-left">
-          {/* <img
-            src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`}
+          <img
+            src={`${process.env.PUBLIC_URL}/images/madrasAcousticsIconn-removebg-preview.png`}
             alt="Madras Acoustics Logo"
             className="footer-logo"
-          /> */}
-          <span className="footer-company-name">Madras Acoustics</span>
+          />
+          <div className="footer-text">
+            <span className="footer-company-name">Madras Acoustics</span>
+            <span className="logo-text1-down">Sound Perfected</span>
+          </div>
         </div>
+
 
         {/* Center - Navigation Links */}
         <nav aria-label="Footer Navigation">

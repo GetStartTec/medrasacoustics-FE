@@ -37,8 +37,10 @@ export const Header = () => {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
         <div className="logo-container" onClick={() => navigate("/")}>
+          <img src={`${process.env.PUBLIC_URL}/images/madrasAcousticsIconn-removebg-preview.png`} alt="logo" />
           <div className="logo-text-wrapper">
             <span className="logo-text">Madras Acoustics</span>
+            <span className="logo-text-down">Sound Perfected</span>
           </div>
         </div>
       </div>
@@ -51,8 +53,8 @@ export const Header = () => {
         {[
           { path: "/", label: "Home" },
           { path: "/acoustics", label: "Acoustics" },
-          { path: "/software", label: "Software" },
           { path: "/team", label: "Team" },
+          { path: "/software", label: "Software" },
           { path: "/contact-us", label: "Contact Us" },
         ].map(({ path, label }) => (
           <li key={path}>

@@ -50,7 +50,7 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .logo-container img {
@@ -76,10 +76,13 @@ body {
 }
 
 .logo-text-down {
-  font-size: 16px;
-  font-family: 'Playfair Display', serif;
-  /* Classy font */
-  color: #eee;
+  font-size: 12px;
+  font-family: 'Cinzel', serif;
+  /* Elegant font */
+  background: linear-gradient(#160f29, #246a73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
   font-style: italic;
 }
 
@@ -806,10 +809,11 @@ section h2 {
 }
 
 .about-text h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #17575f;
   margin-bottom: 10px;
+  
 }
 
 .underline {
@@ -820,15 +824,22 @@ section h2 {
 }
 
 .about-text h1 {
-  font-size: 2.5rem;
+  font-size: 28px;
+  /* Make it larger */
   font-weight: bold;
-  color: #222;
+  font-family: 'Cinzel', serif;
+  /* Elegant font */
+  background: linear-gradient(#160f29, #246a73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.5px;
 }
 
 .about-text h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #17575f;
   margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .about-text p {
@@ -1599,6 +1610,7 @@ section h2 {
  letter-spacing: 1.2px;
 }
 
+
 .home-services-section {
   text-align: center;
   margin-top: 5%;
@@ -1608,7 +1620,8 @@ section h2 {
 .home-services-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
+  margin: 20px 50px;
 }
 
 
@@ -1654,11 +1667,11 @@ section h2 {
 }
 
 .home-about{
-  width: 120px;
-  height: 3px;
+  width: 250px;
+  height: 2px;
   background-color:#444;
   position: absolute;
-  top: 45px;
+  top: 30px;
   left: 0;
 }
 .testimonial-container {
@@ -1687,33 +1700,31 @@ section h2 {
   display: flex;
   gap: 20px;
   overflow: hidden;
+  width: 100%; /* Ensure full width */
 }
 
 .testimonial-card {
   position: relative;
-  width: 100%;
-  height: 400px;
+  width: 32%; /* Each card takes ~33% space */
+  height: 300px;
   background: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
 .curve-bg {
   position: absolute;
-  width: 180%;
+  width: 150%;
   height: 120px;
   background: #0c2340;
   border-radius: 50%;
-  left: -40%;
-  bottom: -30px;
-  transform: rotate(-25deg);
+  left: -30%;
+  bottom: -20px;
+  transform: rotate(-15deg);
   z-index: -1;
 }
-
-
-
 
 /* Header */
 .testimonial-header {
@@ -1799,4 +1810,33 @@ section h2 {
 }
 .right{
   margin-left: 10px;
+}
+
+.footer-left {
+  display: flex; /* Aligns items in a row */
+  align-items: center; /* Aligns items vertically */
+}
+
+.footer-logo {
+  height: 40px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column; /* Stacks text vertically */
+}
+
+.footer-company-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-text1-down {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Exo 2", sans-serif;
+  font-style: italic;
+  color: white;
 }

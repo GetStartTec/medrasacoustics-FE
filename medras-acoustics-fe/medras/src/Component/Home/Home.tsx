@@ -93,10 +93,11 @@ export const Home = () => {
             <img src="/images/home-page-2.jpg" alt="About Us" />
           </div>
           <div className="about-text">
+            <h1 className="logo-text">Madras Acoustics</h1>
+            <h3>Sound Proofing | Space | Design</h3>
             <h2>ABOUT US</h2>
             <h3 className="home-about"></h3>
-            <h1>Madras Acoustics</h1>
-            <h3>Sound Proofing | Space | Design</h3>
+
             <p>
               At Madras Acoustics, we craft immersive soundscapes and exceptional audiovisual environments. Since 2020,
               our expertise has shaped over 100 world-class projects — from professional music studios and concert auditoriums to
@@ -133,17 +134,17 @@ export const Home = () => {
 
         <div className="carousel">
           <div className="carousel-track">
-            {testimonials.slice(carouselIndex, carouselIndex + 2).map((client) => (
+            {testimonials.slice(carouselIndex, carouselIndex + 3).map((client) => (
               <div key={client.id} className="testimonial-card">
                 <div className="curve-bg"></div>
 
                 <div className="testimonial-header">
                   <div className="logo">
-                    <img src="/images/acoustic-1.jpeg" alt="Coursdeck Logo" />
+                    <img src="/images/acoustic-1.jpeg" alt="Client Logo" />
                   </div>
                   <div className="testimonial-title">
                     <h3>
-                      STUDENT <span className="highlight">TESTIMONIAL</span>
+                      CLIENT <span className="highlight">TESTIMONIAL</span>
                     </h3>
                     <div className="stars">★★★★★</div>
                   </div>
@@ -168,15 +169,11 @@ export const Home = () => {
             ))}
           </div>
         </div>
-        <button className="carousel-btn left" onClick={prevSlide}>
-            {'<'}
-          </button>
 
-          <button className="carousel-btn right" onClick={nextSlide}>
-            {'>'}
-          </button>
-
+        <button className="carousel-btn left" onClick={prevSlide}>{'<'}</button>
+        <button className="carousel-btn right" onClick={nextSlide}>{'>'}</button>
       </div>
+
 
     </>
   );
