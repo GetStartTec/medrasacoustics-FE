@@ -565,6 +565,14 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.acoustic-image img:hover {
+  background-color: #246a73; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px #246a73(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
 .acoustic-text {
   flex: 2;
   text-align: left;
@@ -963,6 +971,15 @@ section h2 {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.software-image img:hover {
+  background-color: #246a73; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px #246a73(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
+}
+
 /* Text Styling */
 .software-text {
   flex: 2;
@@ -1038,8 +1055,10 @@ section h2 {
 .service-section {
   display: flex;
   align-items: center;
-  gap: 50px;
-  margin-bottom: 50px;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 5%;
+  flex-direction: row;
 }
 
 .service-content {
@@ -1061,12 +1080,27 @@ section h2 {
 }
 
 .service-image {
-  flex: 1;
+  /* flex: 1; */
+  flex: 0 0 45%;
+  max-width: 45%;
 }
 
 .service-image img {
   width: 100%;
   border-radius: 10px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.service-image img:hover {
+  background-color: #246a73; 
+  border-radius: 10px;
+  transform: scale(1.05); 
+  box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.2), 
+              inset -6px -6px 12px #246a73(255, 255, 255, 0.5), 
+              0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 /* FAQ Section */
@@ -1220,13 +1254,45 @@ section h2 {
 }
 
 
-.close-btn {
+/* .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 24px;
   cursor: pointer;
 }
+
+
+.close-btn:hover {
+  background-color: white; 
+  color: black; 
+  border: 5px solid #246a73; 
+  border-radius: 10px;
+} */
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; 
+  transition: all 0.1s ease;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: black;
+  border: 5px solid #246a73;
+  border-radius: 10px; 
+}
+
+
 
 
 .popup-inner {
