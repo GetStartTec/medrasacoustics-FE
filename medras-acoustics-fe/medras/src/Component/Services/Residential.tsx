@@ -41,8 +41,8 @@ export const Residential = () => {
           <div className="hero-section">
         <img src={`${process.env.PUBLIC_URL}/images/residential-bg.png`} alt="Contact" className="hero-image" />
         <div className="hero-content">
-          <h1>Get in Touch</h1>
-          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+          <h1>Enhancing Home Acoustics</h1>
+          <p>Custom solutions for a quieter, more immersive living experience.</p>
         </div>
       </div>
         <div className="residential-container">

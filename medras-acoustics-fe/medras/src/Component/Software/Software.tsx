@@ -4,31 +4,31 @@ const softwareSections = [
   {
     title: "AFMG",
     image: "/images/afmg.png",
-    content: "EASE 5 isn’t just a tool—it’s the global standard for transforming spaces with precision acoustics. <b>Powered by Innovation </b> With support from 140+ leading loudspeaker manufacturers, EASE 5 ensures seamless sound integration across industries. <b>Adaptive & Customizable </b> Fine-tune acoustics effortlessly with a versatile material library, tailored manually or enhanced through SoundFlow. From concert halls to boardrooms, EASE 5 delivers unparalleled modeling, simulation, and auralization—because sound should be experienced, not just heard",
+    content: "EASE 5 isn’t just a tool—it’s the global standard for transforming spaces with precision acoustics. Powered by Innovation - With support from 140+ leading loudspeaker manufacturers, EASE 5 ensures seamless sound integration across industries. Adaptive & Customizable - Fine-tune acoustics effortlessly with a versatile material library, tailored manually or enhanced through SoundFlow. From concert halls to boardrooms, EASE 5 delivers unparalleled modeling, simulation, and auralization because sound should be experienced, not just heard",
     imageLeft: true,
   },
   {
     title: "SOUND FLOW",
     image: "/images/sound-flow.jfif",
-    content: "SoundFlow is a powerful simulation tool designed to analyze and optimize sound behavior in multi-layer structures. <b> Advanced Sound Control </b> Calculate absorption, reflection, and transmission with unmatched accuracy. <b> Versatile Structural Modeling </b> Effortlessly design walls, floors, and ceilings by customizing layer materials and thickness to meet your exact needs. <b> Seamless with EASE or Standalone Power </b> While the perfect companion for EASE software, SoundFlow also delivers exceptional results as an independent solution.",
+    content: "SoundFlow is a powerful simulation tool designed to analyze and optimize sound behavior in multi-layer structures. Advanced Sound Control - Calculate absorption, reflection, and transmission with unmatched accuracy. Versatile Structural Modeling - Effortlessly design walls, floors, and ceilings by customizing layer materials and thickness to meet your exact needs. Seamless with EASE or Standalone Power - While the perfect companion for EASE software, SoundFlow also delivers exceptional results as an independent solution.",
     imageLeft: false,
   },
   {
     title: "REFLEX",
     image: "/images/acoustic-1.jpeg",
-    content: "Reflex is a cutting-edge 2D acoustics simulation tool designed to model how sound waves reflect, diffuse, and scatter across complex geometries. <b> Precision Sound Modeling </b> Simulate sound interactions with custom-defined structures to achieve optimal acoustic performance. <b> Tailored for Any Space </b> Analyze and refine reflection and diffusion patterns for walls, ceilings, and architectural elements. <b> Seamless with EASE or Standalone Excellence </b> Designed to work flawlessly with EASE software yet powerful enough to deliver results on its own.",
+    content: "Reflex is a cutting-edge 2D acoustics simulation tool designed to model how sound waves reflect, diffuse, and scatter across complex geometries. Precision Sound Modeling - Simulate sound interactions with custom-defined structures to achieve optimal acoustic performance.  Tailored for Any Space - Analyze and refine reflection and diffusion patterns for walls, ceilings, and architectural elements.  Seamless with EASE or Standalone Excellence -  Designed to work flawlessly with EASE software yet powerful enough to deliver results on its own.",
     imageLeft: true,
   },
   {
     title: "INSUL",
     image: "/images/acoustic-1.jpeg",
-    content: "INSUL is a powerful acoustic prediction tool designed to evaluate and enhance sound isolation across various structures. <b> Comprehensive Noise Control </b> Accurately predict transmission loss, impact sound, and rain noise for walls, floors, roofs, ceilings, and windows. <b> Advanced Acoustic Insights </b> Assess key performance metrics like Sound Transmission Class (STC/Rw), Impact Insulation Class (IIC), and LnTw ratings with ease. <b>  Optimize Every Structure </b> From residential buildings to industrial projects, INSUL helps create quieter, more acoustically efficient spaces.",
+    content: "INSUL is a powerful acoustic prediction tool designed to evaluate and enhance sound isolation across various structures. Comprehensive Noise Control - Accurately predict transmission loss, impact sound, and rain noise for walls, floors, roofs, ceilings, and windows. Advanced Acoustic Insights - Assess key performance metrics like Sound Transmission Class (STC/Rw), Impact Insulation Class (IIC), and LnTw ratings with ease.  Optimize Every Structure -  From residential buildings to industrial projects, INSUL helps create quieter, more acoustically efficient spaces.",
     imageLeft: false,
   },
   {
     title: "SYSTUNE",
     image: "/images/acoustic-1.jpeg",
-    content: "SysTune is an advanced audio measurement software designed to capture and process full-length impulse responses in real time with exceptional accuracy. <b> Unmatched Measurement Quality </b> Delivering precise, high-resolution data for professional audio analysis. <b> Designed for Efficiency </b> Packed with unique features to streamline workflows, making a technician’s job faster and easier. <b> Optimize Sound Like Never Before </b> From live events to studio setups, SysTune ensures accurate, real-time acoustic assessment for flawless audio performance.",
+    content: "SysTune is an advanced audio measurement software designed to capture and process full-length impulse responses in real time with exceptional accuracy. Unmatched Measurement Quality - Delivering precise, high-resolution data for professional audio analysis. Designed for Efficiency - Packed with unique features to streamline workflows, making a technician’s job faster and easier. Optimize Sound Like Never Before - From live events to studio setups, SysTune ensures accurate, real-time acoustic assessment for flawless audio performance.",
     imageLeft: true,
   },
 ];

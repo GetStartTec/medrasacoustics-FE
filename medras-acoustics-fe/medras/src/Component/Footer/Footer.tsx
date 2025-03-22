@@ -36,12 +36,13 @@ export const Footer = () => {
       {/* Social Media Links - Centered on a New Line */}
       <div className="footer-social">
         {[
-          { href: "https://facebook.com", icon: "fab fa-facebook-f", label: "Facebook" },
-          { href: "mailto:jeromedj@madrasacoustics.com", icon: "fas fa-envelope", label: "Email" },
-          { href: "https://instagram.com/madras_acoustics/", icon: "fab fa-instagram", label: "Instagram" },
-          { href: "https://wa.me/918248365067", icon: "fab fa-whatsapp", label: "WhatsApp" },
           { href: "tel:+918248365067", icon: "fas fa-phone", label: "Phone" },
-          { href: "https://goo.gl/maps/example", icon: "fas fa-map-marker-alt", label: "Location" },
+          { href: "https://wa.me/918248365067", icon: "fab fa-whatsapp", label: "WhatsApp" },
+          { href: "mailto:jeromedj@madrasacoustics.com", icon: "fas fa-envelope", label: "Email" },
+          { href: "https://www.facebook.com/share/18kVHF8oaP/", icon: "fab fa-facebook-f", label: "Facebook" },
+          { href: "https://instagram.com/madras_acoustics/", icon: "fab fa-instagram", label: "Instagram" },
+          { href: "https://x.com/madrasacoustics?t=L0Mh48j0u6tjYhUAw00f_g&s=08", icon: "fab fa-x-twitter", label: "Instagram" },
+          { href: "https://www.google.com/maps/search/?api=1&query=9/10,+Perumal+Kovil+Street,+Kotturpuram,+Chennai+600085", icon: "fas fa-map-marker-alt", label: "Location" },
         ].map(({ href, icon, label }) => (
           <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
             <i className={icon}></i>

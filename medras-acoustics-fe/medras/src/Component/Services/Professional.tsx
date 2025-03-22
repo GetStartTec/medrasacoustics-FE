@@ -29,8 +29,8 @@ export const Professional = () => {
       <div className="hero-section">
         <img src={`${process.env.PUBLIC_URL}/images/professional-bg.png`} alt="Contact" className="hero-image" />
         <div className="hero-content">
-          <h1>Get in Touch</h1>
-          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+          <h1>Expert Solutions, Exceptional Results</h1>
+          <p>Tailored acoustic designs for studios, offices, and commercial spaces.</p>
         </div>
       </div>
       <div className="professional-container">
