@@ -1,70 +1,88 @@
 import React, { useEffect, useState } from "react";
-// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const testimonials = [
+  {
+    id: 1,
+    name: "Sonale Verma",
+    salary: "6.5 LPA",
+    role: "Cloud Developer at Global Logics",
+    image: "/images/acoustic-1.jpeg",
+    text: "I took the DevOps certification course at Coursdeck, and it was a game-changer for my career. Their high-quality content and effective training pedagogy made learning a breeze...",
+  },
+  {
+    id: 2,
+    name: "Amit Sharma",
+    salary: "7 LPA",
+    role: "DevOps Engineer at Infosys",
+    image: "/images/acoustic-1.jpeg",
+    text: "The hands-on training and support from Coursdeck helped me transition smoothly into a DevOps role. The placement team was very supportive...",
+  },
+  {
+    id: 3,
+    name: "Riya Mehta",
+    salary: "8 LPA",
+    role: "Software Engineer at TCS",
+    image: "/images/acoustic-1.jpeg",
+    text: "Coursdeck's structured courses and live sessions made learning easy. I gained confidence in cloud technologies and secured a great job...",
+  },
+  {
+    id: 4,
+    name: "Rahul Singh",
+    salary: "9 LPA",
+    role: "Cloud Architect at Accenture",
+    image: "/images/acoustic-1.jpeg",
+    text: "Thanks to Coursdeck, I was able to build a strong career in cloud computing. The mentors were extremely helpful throughout the course...",
+  },
+];
+
+
 export const Home = () => {
-  interface Client {
-    id: number;
-    name: string;
-    image: string;
-    content: string;
-  }
-
-  const clients: Client[] = [
-    {
-      id: 1,
-      name: "Client 1",
-      image: "/images/client1.jpg",
-      content: "Client 1 testimonial or description goes here."
-    },
-    {
-      id: 2,
-      name: "Client 2",
-      image: "/images/client2.jpg",
-      content: "Client 2 testimonial or description goes here."
-    },
-    {
-      id: 3,
-      name: "Client 3",
-      image: "/images/client3.jpg",
-      content: "Client 3 testimonial or description goes here."
-    }
-  ];
-
-
-  const nextClient = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % clients.length);
-  };
-
-  const prevClient = () => {
-    setIndex((prevIndex) =>
-      prevIndex === 0 ? clients.length - 1 : prevIndex - 1
-    );
-  };
   const fullText = "Engineering Excellence in Sound & Silence";
   const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
+  const [typewriterIndex, setTypewriterIndex] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
+  // Typewriter Effect
   useEffect(() => {
-    if (index < fullText.length) {
+    if (typewriterIndex < fullText.length) {
       const timeout = setTimeout(() => {
-        setText((prev) => prev + fullText[index]);
-        setIndex(index + 1);
-      }, 50); // Typing speed
-
+        setText((prev) => prev + fullText[typewriterIndex]);
+        setTypewriterIndex(typewriterIndex + 1);
+      }, 50);
       return () => clearTimeout(timeout);
     }
-  }, [index]);
+  }, [typewriterIndex]);
+
+  // Carousel Navigation
+  const nextSlide = () => {
+    setCarouselIndex((prev) =>
+      prev + 2 < testimonials.length ? prev + 2 : 0
+    );
+  };
+
+  const prevSlide = () => {
+    setCarouselIndex((prev) =>
+      prev - 2 >= 0 ? prev - 2 : testimonials.length - 2
+    );
+  };
+
 
   return (
     <>
       <div className="home-section">
         <div className="home-overlay">
           <h1 className="typewriter">{text}</h1>
-          <p className="static-text">We bring precision acoustics to life, enhancing every sonic experience.From home theaters to studios, </p>
-          <p className="static-text">we create spaces where sound thrives.</p>
+          <p className="static-text">
+            We bring precision acoustics to life, enhancing every sonic
+            experience. From home theaters to studios,
+          </p>
+          <p className="static-text">
+            we create spaces where sound thrives.
+          </p>
         </div>
       </div>
+
 
       {/* Main Container */}
       <div className="home-container mt-10 px-6 md:px-20">
@@ -110,56 +128,56 @@ export const Home = () => {
 
       </div>
 
-      {clients.length > 0 && index < clients.length && (
-        <div className="client-carousel">
-          <h2 className="carousel-title">Our Clients</h2>
-          <div className="carousel-container">
-            <div className="client-card">
-              <div className="client-image">
-                <img src={clients[index]?.image} alt={clients[index]?.name} />
-              </div>
-              <div className="curved-content">
-                <div className="curve large">{clients[index]?.content}</div>
-                <div className="curve medium"></div>
-                <div className="curve small"></div>
-              </div>
-            </div>
-          </div>
-          {/* <div className="carousel-buttons">
-            <button onClick={prevClient} className="carousel-btn">
-              <FaChevronLeft />
-            </button>
-            <button onClick={nextClient} className="carousel-btn">
-              <FaChevronRight />
-            </button>
-          </div> */}
-        </div>
-      )}
+      <div className="testimonial-container">
+        <h2 className="home-section-title">Our Clients</h2>
 
-      {/* 
-      <div className="client-carousel">
-        <h2 className="carousel-title">Our Clients</h2>
-        <div className="carousel-container">
-          <div className="client-card">
-            <div className="client-image">
-              <img src={clients[index].image} alt={clients[index].name} />
-            </div>
-            <div className="curved-content">
-              <div className="curve large">{clients[index].content}</div>
-              <div className="curve medium"></div>
-              <div className="curve small"></div>
-            </div>
+        <div className="carousel">
+          <div className="carousel-track">
+            {testimonials.slice(carouselIndex, carouselIndex + 2).map((client) => (
+              <div key={client.id} className="testimonial-card">
+                <div className="curve-bg"></div>
+
+                <div className="testimonial-header">
+                  <div className="logo">
+                    <img src="/images/acoustic-1.jpeg" alt="Coursdeck Logo" />
+                  </div>
+                  <div className="testimonial-title">
+                    <h3>
+                      STUDENT <span className="highlight">TESTIMONIAL</span>
+                    </h3>
+                    <div className="stars">★★★★★</div>
+                  </div>
+                </div>
+
+                <div className="testimonial-content">
+                  <p>{client.text}</p>
+                </div>
+
+                <div className="testimonial-footer">
+                  <div className="student-info">
+                    <h4 className="student-name">
+                      {client.name} <span>({client.salary})</span>
+                    </h4>
+                    <p className="student-role">{client.role}</p>
+                  </div>
+                  <div className="student-image">
+                    <img src={client.image} alt={client.name} />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="carousel-buttons">
-          <button onClick={prevClient} className="carousel-btn">
-            <FaChevronLeft />
+        <button className="carousel-btn left" onClick={prevSlide}>
+            {'<'}
           </button>
-          <button onClick={nextClient} className="carousel-btn">
-            <FaChevronRight />
+
+          <button className="carousel-btn right" onClick={nextSlide}>
+            {'>'}
           </button>
-        </div>
-      </div> */}
+
+      </div>
+
     </>
   );
 };
